@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#settings-opacitiy-slider {
+    position: fixed;
+    z-index: 1000;
+    right: 75px;
+    top: 7px;
+    width: 200px;
+    background: white;
+    padding: 4px;
+    border-radius: 4px;
+    display: none;
+}
+#settings-card {
+    opacity: 1;
+    position: fixed;
+    top: 55px;
+    right: 10px;
+    z-index: 1000;
+    display: none;
+}
+#cc-color-label {
+    font-family: 'Courier New', monospace;
+}
+#tile-select {
+    margin-top: 2px;
+}
+
+#static-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: no-repeat center center fixed;
+    background-size: cover;
+}
+
+#main-background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#title-banner {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    height: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#title-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+
+    gap: 4vw;
+
+    height: 40%;
+    aspect-ratio: 15 / 4;
+
+    transform: translate(-50%, 0);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card {
+    background: #000;
+    height: 50%;
+    width: 15%;
+    border-radius: 2vw;
+    border: 0.5vh solid #9d19c1;
+}
+
+#tiled-image {
+    width: 100%;
+    height: auto;
+    padding-top: 200%;
+    background-size: 50%;
+    background-repeat: repeat;
+}
+
+#tiled-image img {
+    display: none;
+}
+
+sl-option img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+:root {
+    /* Changes the primary theme color to blue using primitives */
+    --sl-color-primary-50:  var(--sl-color-blue-50);
+    --sl-color-primary-100: var(--sl-color-blue-100);
+    --sl-color-primary-200: var(--sl-color-blue-200);
+    --sl-color-primary-300: var(--sl-color-blue-300);
+    --sl-color-primary-400: var(--sl-color-blue-400);
+    --sl-color-primary-500: var(--sl-color-blue-500);
+    --sl-color-primary-600: var(--sl-color-blue-600);
+    --sl-color-primary-700: var(--sl-color-blue-700);
+    --sl-color-primary-800: var(--sl-color-blue-800);
+    --sl-color-primary-900: var(--sl-color-blue-900);
+    --sl-color-primary-950: var(--sl-color-blue-950);
+}

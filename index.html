@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Website Template</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/shoelace-autoloader.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <sl-button id="settings-button" circle size="large" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+        <sl-icon name="gear"></sl-icon>
+    </sl-button>
+
+    <sl-range id="settings-opacitiy-slider" label="Settings Opacity" min="0" max="1" step="0.05" value="1"></sl-range>
+    <sl-card id="settings-card">
+        <div id="controls">
+            <sl-select id="background-select" label="Background:" placeholder="Select Background">
+                <sl-option value="Backgrounds/bg1.jpg"><img src="Backgrounds/bg1.jpg" alt="Background 1"> Background 1</sl-option>
+                <sl-option value="Backgrounds/bg2.jpg"><img src="Backgrounds/bg2.jpg" alt="Background 2"> Background 2</sl-option>
+                <sl-option value="Backgrounds/bg3.jpg"><img src="Backgrounds/bg3.jpg" alt="Background 3"> Background 3</sl-option>
+                <sl-option value="Backgrounds/bg4.jpg"><img src="Backgrounds/bg4.jpg" alt="Background 4"> Background 4</sl-option>
+                <sl-option value="Backgrounds/bg5.jpg"><img src="Backgrounds/bg5.jpg" alt="Background 5"> Background 5</sl-option>
+                <sl-option value="Backgrounds/bg6.jpg"><img src="Backgrounds/bg6.jpg" alt="Background 6"> Background 6</sl-option>
+                <sl-option value="Backgrounds/bg7.jpg"><img src="Backgrounds/bg7.jpg" alt="Background 7"> Background 7</sl-option>
+                <sl-option value="Backgrounds/bg8.jpg"><img src="Backgrounds/bg8.jpg" alt="Background 8"> Background 8</sl-option>
+                <sl-option value="Backgrounds/bg9.jpg"><img src="Backgrounds/bg9.jpg" alt="Background 9"> Background 9</sl-option>
+                <sl-option value="Backgrounds/bg10.jpg"><img src="Backgrounds/bg10.jpg" alt="Background 10"> Background 10</sl-option>
+            </sl-select>
+
+            <sl-select id="title-banner-select" label="Title Banner:" placeholder="Select Title Banner Image">
+                <sl-option value="Banners/banner1.png"><img src="Banners/banner1.png" alt="Banner 1"> Banner 1</sl-option>
+                <sl-option value="Banners/banner2.png"><img src="Banners/banner2.png" alt="Banner 2"> Banner 2</sl-option>
+                <sl-option value="Banners/banner3.png"><img src="Banners/banner3.png" alt="Banner 3"> Banner 3</sl-option>
+                <sl-option value="Banners/banner4.png"><img src="Banners/banner4.png" alt="Banner 4"> Banner 4</sl-option>
+            </sl-select>
+
+            <sl-select id="card-container-select" label="Card Container:" placeholder="Select Card Container Image">
+                <sl-option value="BottomBanners/bb1.png"><img src="BottomBanners/bb1.png" alt="Card 1"> Card 1</sl-option>
+                <sl-option value="BottomBanners/bb2.png"><img src="BottomBanners/bb2.png" alt="Card 2"> Card 2</sl-option>
+                <sl-option value="BottomBanners/bb3.png"><img src="BottomBanners/bb3.png" alt="Card 3"> Card 3</sl-option>
+                <sl-option value="BottomBanners/bb4.png"><img src="BottomBanners/bb4.png" alt="Card 4"> Card 4</sl-option>
+                <sl-option value="BottomBanners/bb5.png"><img src="BottomBanners/bb5.png" alt="Card 5"> Card 5</sl-option>
+                <sl-option value="BottomBanners/bb6.png"><img src="BottomBanners/bb6.png" alt="Card 6"> Card 6</sl-option>
+                <sl-option value="BottomBanners/bb7.png"><img src="BottomBanners/bb7.png" alt="Card 7"> Card 7</sl-option>
+                <sl-option value="BottomBanners/bb8.png"><img src="BottomBanners/bb8.png" alt="Card 8"> Card 8</sl-option>
+                <sl-option value="BottomBanners/bb9.png"><img src="BottomBanners/bb9.png" alt="Card 9"> Card 9</sl-option>
+            </sl-select>
+            <sl-range id="cc-spacing-slider" label="Spacing (4)" min="0" max="10" step="0.5" value="4"></sl-range>
+            <sl-range id="cc-width-slider" label="Width (15)" min="0" max="25" value="15"></sl-range>
+            <sl-range id="cc-height-slider" label="Height (50)" min="0" max="100" value="50"></sl-range>
+            <sl-range id="cc-offset-x-slider" label="Offset X (0)" min="0" max="250" value="0"></sl-range>
+            <sl-range id="cc-offset-y-slider" label="Offset Y (0)" min="0" max="250" value="0"></sl-range>
+
+            <sl-color-picker id="cc-color-chooser" size="small" value="#f5a623ff" opacity></sl-color-picker>
+            <span id="cc-color-label" slot="prefix" float="left">#f5a623ff</span>
+
+            <sl-select id="tile-select" label="Tiling Image:" placeholder="Select Tiling Image">
+                <sl-option value="Tiles/tile1.jpg"><img src="Tiles/tile1.jpg" alt="Tile 1"> Tile 1</sl-option>
+                <sl-option value="Tiles/tile2.jpg"><img src="Tiles/tile2.jpg" alt="Tile 2"> Tile 2</sl-option>
+                <sl-option value="Tiles/tile3.jpg"><img src="Tiles/tile3.jpg" alt="Tile 3"> Tile 3</sl-option>
+                <sl-option value="Tiles/tile4.jpg"><img src="Tiles/tile4.jpg" alt="Tile 4"> Tile 4</sl-option>
+                <sl-option value="Tiles/tile5.jpg"><img src="Tiles/tile5.jpg" alt="Tile 5"> Tile 5</sl-option>
+                <sl-option value="Tiles/tile6.jpg"><img src="Tiles/tile6.jpg" alt="Tile 6"> Tile 6</sl-option>
+                <sl-option value="Tiles/tile7.jpg"><img src="Tiles/tile7.jpg" alt="Tile 7"> Tile 7</sl-option>
+                <sl-option value="Tiles/tile8.jpg"><img src="Tiles/tile8.jpg" alt="Tile 8"> Tile 8</sl-option>
+            </sl-select>
+
+            <sl-range id="t-scale-slider" label="Scale (0.5)" min="0.1" max="2" step="0.1" value="0.5"></sl-range>
+            <sl-range id="t-offset-x-slider" label="Offset X (0)" min="0" max="250" value="0"></sl-range>
+            <sl-range id="t-offset-y-slider" label="Offset Y (0)" min="0" max="250" value="0"></sl-range>
+        </div>
+    </sl-card>
+
+    <div id="static-background"></div>
+
+    <div id="main-background">
+        <div id="title-banner">
+            <h1 id="title-text">My Website Title</h1>
+        </div>
+
+        <div id="card-container">
+            <div class="card" id="card-1"></div>
+            <div class="card" id="card-2"></div>
+            <div class="card" id="card-3"></div>
+            <div class="card" id="card-4"></div>
+        </div>
+    </div>
+
+    <div id="tiled-image">
+        <img alt="Tiling Image">
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
